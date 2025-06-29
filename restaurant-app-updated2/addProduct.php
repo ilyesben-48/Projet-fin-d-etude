@@ -24,11 +24,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $image_destination = 'uploads/' . $image_new_name;
                 move_uploaded_file($image_tmp_name, $image_destination);
             } else {
-                echo "❌ حجم الصورة كبير بزاف (الحد الأقصى 2MB).";
+                echo "  ( La taille de l'image est trop grande)";
                 exit;
             }
         } else {
-            echo "❌ نوع الملف غير مسموح به.";
+            echo " (Type de fichier non autorisé.)";
             exit;
         }
     }
